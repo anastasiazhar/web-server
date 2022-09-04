@@ -1,4 +1,7 @@
 package org.example;
 
-public record MyResponse() {
+import java.io.ByteArrayOutputStream;
+import java.util.HashMap;
+
+public record MyResponse(StatusLine statusLine, HashMap<String, String> responseHeaders, ByteArrayOutputStream responseBody) {
 }
