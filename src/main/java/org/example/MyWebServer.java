@@ -30,7 +30,6 @@ public class MyWebServer implements Runnable{
             HashMap<String, String> requestHeaders = new HashMap<>();
             RequestPart currentRequestPart = RequestPart.REQUEST_LINE;
             loop: while ((currentLine = bufferedReader.readLine()) != null) {
-//                System.out.println("Thread " + Thread.currentThread().getName() + ": " + currentLine);
                 switch (currentRequestPart) {
                     case REQUEST_LINE -> {
                         String[] split = currentLine.split(" ");
